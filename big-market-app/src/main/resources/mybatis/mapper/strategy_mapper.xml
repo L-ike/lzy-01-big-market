@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzy.infrastructure.persistent.dao.IStrategyDao">
+
+    <resultMap id="dataMap" type="com.lzy.infrastructure.persistent.po.Strategy">
+        <id column="id" property="id"/>
+        <result column="strategyId" property="strategyId"/>
+        <result column="strategyDesc" property="strategyDesc"/>
+        <result column="createTime" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+
+    <select id="queryStrategyList" resultMap="dataMap">
+        select id,strategyId,strategyDesc,createTime,update_time
+        from strategy
+                 limit 10
+    </select>
+
+</mapper>
