@@ -18,6 +18,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <!-- 无需指定版本，Spring Boot 父工程已管理版本，和你的 2.7.12 适配 -->
+        </dependency>
         <!-- 系统模块 -->
         <dependency>
             <groupId>com.lzy</groupId>
